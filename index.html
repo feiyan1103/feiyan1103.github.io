@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>飞燕 💗 我爱你</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital-7_mono.ttf') format("truetype");
+		}
+	</style>
+	<link href="css/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/garden.js"></script>
+	<script type="text/javascript" src="js/functions.js"></script>
+</head>
+
+<body>
+	<div id="mainDiv">
+		<div id="content">
+			<div id="code">
+				<span class="comments">/**</span><br />
+				<span class="space" /><span class="comments">* 飞燕，感谢生命之中遇见了你 </span><br />
+				<span class="space" /><span class="comments">* 这是与你相逢之后的点点滴滴 </span><br />
+				<span class="space" /><span class="comments">*/</span><br /><br /> Boy&nbsp;&nbsp;i = <span class="keyword">new</span>
+				Boy(<span class="string">"Haiyang"</span>);<br /> Girl u = <span class="keyword">new</span> Girl(<span class="string">"Feiyan"</span>);<br
+				/><br />
+				<span class="comments">// 6-8, 2018, 前世五百年的回眸，换来今世与你相遇。</span><br /> i.know(u);
+				<br /><br />
+				<span class="comments">// 6-21, 2018, 夏至那天的初逢，在我心里烙印上了你的身影。</span><br /> i.like(u);
+				<br /><br />
+				<span class="comments">//  自此以后，每天都在深深的思念着你。</span><br /> i.miss(u);
+				<br /><br />
+				<span class="comments">//  你让我感受到幸福与开心。</span><br /> i.match(u);
+				<br /><br />
+				.<br />
+				.<br />
+				.<br />
+				<br />
+				<span class="comments">//  i know we'll have long time to spend together </span><br /> u.accept(i);
+				<br /><br />
+				<span class="comments">//  and i'll take care of u and our love </span><br /> i.takeCareOf(u);
+				<br /><br />
+				<span class="comments">//  i look forward the day we get married </span><br /> u.marry(i);
+				<br /><br />
+				<span class="comments">// we will live happily ever after </span><br /> i.liveHappilyWith(u);
+			</div>
+			<div id="loveHeart">
+				<canvas id="garden"></canvas>
+				<div id="words">
+					<div id="messages">
+						Feiyan, I have fallen in love with you for
+						<div id="elapseClock"></div>
+					</div>
+					<div id="loveu">
+						Love u forever and ever.<br/>
+						<div class="signature">- Haiyang</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<script type="text/javascript">
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+		var together = new Date();
+		together.setFullYear(2018, 5, 8);
+		together.setHours(16);
+		together.setMinutes(0);
+		together.setSeconds(0);
+		together.setMilliseconds(0);
+
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+			document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				startHeartAnimation();
+			}, 5000);
+
+			timeElapse(together);
+			setInterval(function () {
+				timeElapse(together);
+			}, 500);
+
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+	</script>
+</body>
+
+</html>
